@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antigravity Browser Bridge</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="Gemini" class="logo" />
+        <div class="brand-text">
+          <div class="title-row">
+            <span class="title">Browser Bridge</span>
+            <span id="browserBadge" class="badge badge-browser">Chrome</span>
+          </div>
+          <div class="status-row">
+            <span id="statusDot" class="status-dot"></span>
+            <span id="statusText" class="status-text">检查中...</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="errorBanner" class="error-banner hidden"></div>
+
+    <section class="controls">
+      <label class="switch-label" title="暂停后 AI 将无法读取或操作标签页">
+        <input type="checkbox" id="enableToggle" checked />
+        <span class="slider"></span>
+        <span class="switch-text">启用 AI 连接</span>
+      </label>
+      <div class="btn-group">
+        <button id="detachBtn" class="btn btn-warn hidden" title="分离全部调试器，关闭顶部调试横幅">分离调试器</button>
+        <button id="reconnectBtn" class="btn btn-secondary">重连</button>
+      </div>
+    </section>
+
+    <section class="sync-row">
+      <label class="mini-switch" title="操作页面时显示 Gemini 虚拟鼠标移动和点击波纹">
+        <input type="checkbox" id="cursorToggle" checked />
+        <span class="mini-slider"></span>
+        <span>显示虚拟鼠标</span>
+      </label>
+      <div class="sync-group">
+        <span class="sync-label">/ 菜单</span>
+        <select id="syncModeSelect" class="sync-select">
+          <option value="auto">自动同步 (最多10页)</option>
+          <option value="selected">仅同步选定页</option>
+          <option value="off">关闭同步</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <input type="search" id="searchInput" class="search-input" placeholder="搜索已打开的标签页..." />
+      <button id="clearSelectedBtn" class="btn btn-ghost" title="清除所有已选定标签页">清除选定</button>
+    </section>
+
+    <div class="list-header">
+      <span id="tabCountText">标签页 (0)</span>
+      <span id="selectedCountText" class="selected-hint">点击「选定」可置顶目标页</span>
+    </div>
+
+    <main id="tabList" class="tab-list">
+      <div class="empty-state">正在加载标签页...</div>
+    </main>
+
+    <footer class="footer">
+      <span class="ext-id" id="extIdText">ID: mnccmppmfbpfjimoacoamffodlepbjhl</span>
+      <span class="tip">在 Antigravity 输入 / 即可直选当前打开的标签页</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

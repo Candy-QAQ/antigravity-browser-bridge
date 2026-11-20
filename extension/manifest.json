@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Antigravity Browser Bridge",
+  "version": "1.0.0",
+  "description": "将日常 Chrome / Edge 浏览器的实时标签页与调试能力直接桥接到 Antigravity AI（无需新开浏览器）。",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzisBY/PmK3Nv5TtaiuZrBzoFjA3gAl0aUNQ6QxFXxbiZ0dp0wrQ/EsHQuajnaLAZjCpVtQ+0xGB1gew0mxRuurhXlo47YTeYK+cyOevlnmy3vVskbGcmhvhGraqNeFTiEqvjiMbSbH99BzV1QRwQGUHSIRcM3I+wExlRplCUq6JhWS6WFErmyNNUwR9AnoMmohNyYy5uTni4geOW/CtDiGUApUubOpn0S9mxDms9FFxIfWVW9XlEIHc8AW4w7MZ7eXI0Z9iZkao90p1/hIpKLtIvKZ409M4XiRcAWSFjkklHLo1KCazyJ6mzLJuKEz/rKQwtJ9hLcAtvkp6tR2/j1wIDAQAB",
+  "permissions": [
+    "nativeMessaging",
+    "tabs",
+    "tabGroups",
+    "debugger",
+    "scripting",
+    "activeTab",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Antigravity Browser Bridge",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

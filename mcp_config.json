@@ -1,0 +1,10 @@
+{
+    "mcpServers":  {
+                       "browser-bridge":  {
+                                              "command":  "C:\\nodejs\\node.exe",
+                                              "args":  [
+                                                           "C:\\Users\\Candy\\.gemini\\config\\plugins\\browser-bridge\\server\\mcp-server.mjs"
+                                                       ]
+                                          }
+                   }
+}

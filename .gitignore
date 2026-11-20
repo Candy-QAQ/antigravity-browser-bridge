@@ -1,0 +1,7 @@
+# Runtime shared secret & logs
+.bridge-token
+logs/
+*.log
+
+# Dynamically synced live browser tab skills
+skills/_tab-*/

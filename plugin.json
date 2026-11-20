@@ -1,0 +1,12 @@
+{
+  "name": "browser-bridge",
+  "displayName": "Browser Bridge",
+  "version": "1.0.0",
+  "description": "通过 Chrome / Edge Native Messaging 扩展直接连接你的日常主浏览器，在对话中输入 / 即可实时选择、读取和操控当前打开的标签页。",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "列出我当前浏览器打开的所有标签页",
+    "总结我现在正在看的这个网页内容",
+    "截取当前浏览器标签页画面并检查页面上的报错信息"
+  ]
+}
